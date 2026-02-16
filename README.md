@@ -112,17 +112,8 @@ Ce dictionnaire liste les données « brutes » évoquées dans les règles ci-d
 
 ---
 
-## Étapes suivantes
+## Auteurs
 
-À partir de ces règles de gestion et du dictionnaire de données, les prochaines étapes de la méthode MERISE seront :
-
-1. **Modèle Conceptuel de Données (MCD)** : identification des entités, associations et cardinalités
-2. **Modèle Logique de Données (MLD)** : transformation du MCD en schéma relationnel
-3. **Modèle Physique de Données (MPD)** : implémentation dans un SGBD (MySQL, PostgreSQL, etc.)
-4. **Développement de l'application** : création des interfaces et requêtes SQL
-
----
-
-## Auteur
-
-Étudiant en ingénierie informatique - Projet MERISE 2026
+Rayan BELHOUS
+Cyril ROUSSELLE
+Mathis GUICHERD-CALLIN
