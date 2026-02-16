@@ -1,4 +1,4 @@
-# Projet MERISE - Système d'Information pour la Vente Automobile
+# Mini Projet de Concession - Système d'Information pour la Vente Automobile
 
 ## Contexte du projet
 
