@@ -115,5 +115,7 @@ Ce dictionnaire liste les données « brutes » évoquées dans les règles ci-d
 ## Auteurs
 
 Rayan BELHOUS
+
 Cyril ROUSSELLE
+
 Mathis GUICHERD-CALLIN
