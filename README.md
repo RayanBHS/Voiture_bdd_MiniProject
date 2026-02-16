@@ -1,8 +1,7 @@
 # Mini Projet de Concession - Système d'Information pour la Vente Automobile
 
 ## Contexte du projet
-
-Ce projet vise à concevoir un système d'information pour une entreprise de distribution automobile multimarques de type **ByMyCar**. L'objectif est d'appliquer la méthode **MERISE** pour modéliser et développer une base de données complète permettant de gérer l'ensemble du cycle commercial : véhicules, clients, devis, ventes, financement et reprises.
+Ce projet vise à concevoir un système d'information pour concessionnaire automobile multimarques de type **ByMyCar**. L'objectif est d'appliquer la méthode **MERISE** pour modéliser et développer une base de données complète permettant de gérer l'ensemble du cycle commercial : véhicules, clients, devis, ventes, financement et reprises.
 
 ---
 
