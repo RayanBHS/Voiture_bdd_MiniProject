@@ -7,7 +7,7 @@ Ce projet vise à concevoir un système d'information pour concessionnaire autom
 
 ## Prompt utilisé
 
-Tu travailles dans le domaine de l'automobile. Ton entreprise a comme activité de vendre des voitures. C'est une entreprise comme ByMyCar, ou encore les concessionnaires classiques. Il faut des données sur les voitures vendues, les marques de voitures, les modèles de voiture, les clients. Inspire-toi de la marque suivante : ByMyCar.
+'''Tu travailles dans le domaine de l'automobile. Ton entreprise a comme activité de vendre des voitures. C'est une entreprise comme ByMyCar, ou encore les concessionnaires classiques. Il faut des données sur les voitures vendues, les marques de voitures, les modèles de voiture, les clients. Inspire-toi de la marque suivante : ByMyCar.
 
 Ton entreprise veut appliquer MERISE pour concevoir un système d'information. Tu es chargé de la partie analyse, c'est-à-dire de collecter les besoins auprès de l'entreprise. Elle a fait appel à un étudiant en ingénierie informatique pour réaliser ce projet, tu dois lui fournir les informations nécessaires pour qu'il applique ensuite lui-même les étapes suivantes de conception et développement de la base de données.
 
@@ -15,7 +15,7 @@ D'abord, établis les règles de gestions des données de ton entreprise, sous l
 
 Ensuite, à partir de ces règles, fournis un dictionnaire de données brutes avec les colonnes suivantes, regroupées dans un tableau : signification de la donnée, type, taille en nombre de caractères ou de chiffres. Il doit y avoir entre 25 et 35 données. Il sert à fournir des informations supplémentaires sur chaque donnée (taille et type) mais sans a priori sur comment les données vont être modélisées ensuite.
 
-Fournis donc les règles de gestion et le dictionnaire de données.
+Fournis donc les règles de gestion et le dictionnaire de données.'''
 
 ---
 
@@ -37,7 +37,7 @@ Ces règles décrivent le fonctionnement de notre réseau de concessionnaires av
 
 ## Dictionnaire de données brutes
 
-Ce dictionnaire liste les données « brutes » évoquées dans les règles ci-dessus, sans préjuger de la façon dont elles seront regroupées en entités ou clés dans le MCD/MLD MERISE. Les champs calculables ont été exclus pour anticiper la 3ème Forme Normale (3FN).
+Ce dictionnaire liste les données « brutes » évoquées dans les règles ci-dessus, sans préjuger de la façon dont elles seront regroupées en entités ou clés dans le MCD/MLD MERISE.
 
 | Signification de la donnée | Type | Taille (caractères / chiffres) |
 | :--- | :--- | :--- |
