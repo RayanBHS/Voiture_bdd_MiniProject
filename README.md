@@ -77,6 +77,10 @@ Ce dictionnaire liste les données « brutes » évoquées dans les règles ci-d
 **Total : 31 données**
 
 ---
+**MCD**
+<img width="1400" height="819" alt="image" src="https://github.com/user-attachments/assets/9e421749-19f1-4d00-ab95-f24caa0bc35f" />
+
+--
 
 ## Auteurs
 
