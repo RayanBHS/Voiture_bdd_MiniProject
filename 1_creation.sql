@@ -1,6 +1,6 @@
 CREATE TABLE VILLE(
    Code_postal VARCHAR(10),
-   Nom_de_la_ville VARCHAR(100) NOT NULL,
+   Nom_de_la_ville VARCHAR(100) NOT NULL UNIQUE,
    PRIMARY KEY(Code_postal)
 );
 
@@ -77,9 +77,9 @@ CREATE TABLE FAIRE_OFFRE(
    Numero_client VARCHAR(20),
    Matricule_commercial VARCHAR(20),
    Code_modele VARCHAR(20),
-   Date_offre DATE,
+   Date_offre DATETIME,
    Prix_propose DECIMAL(10,2) NOT NULL,
-   PRIMARY KEY(Numero_client, Matricule_commercial, Code_modele),
+   PRIMARY KEY(Numero_client, Matricule_commercial, Code_modele, Date_offre),
    FOREIGN KEY(Numero_client) REFERENCES CLIENT(Numero_client) ON DELETE CASCADE ON UPDATE CASCADE,
    FOREIGN KEY(Matricule_commercial) REFERENCES COMMERCIAL(Matricule_commercial) ON DELETE CASCADE ON UPDATE CASCADE,
    FOREIGN KEY(Code_modele) REFERENCES MODELE(Code_modele) ON DELETE CASCADE ON UPDATE CASCADE
