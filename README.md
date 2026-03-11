@@ -197,6 +197,62 @@ Fournis l'ensemble sous la forme d’un script SQL prêt à être exécuté.
 ```
 
 ---
+**Scénario d'utilisation**
+
+# Contexte d'Utilisation de la Base de Données "Concession Auto"
+
+## Rôle et Contexte
+**Utilisateur cible :** Commercial en concession automobile.
+
+**Scénario d'utilisation :** 
+Le commercial utilise la base de données au quotidien pour interagir avec les clients, vérifier les disponibilités de véhicules, proposer des offres et suivre son propre portefeuille client. Lorsqu'un client se présente en concession avec des critères précis (ex. une voiture électrique d'une certaine marque, ou un budget précis), le commercial doit pouvoir interroger rapidement le stock. De plus, il doit suivre les relances à effectuer, analyser ses précédentes offres pour ajuster son argumentaire, et s'assurer de la pertinence de ses propositions par rapport au marché local.
+
+Ses objectifs principaux sont :
+1. **Recherche de véhicules en stock** : Vérifier la disponibilité des modèles selon les critères des clients (marque, budget, énergie).
+2. **Gestion de la relation client (CRM)** : Retrouver les coordonnées d'un profil client, consulter l'historique de ses offres.
+3. **Suivi de performance personnelle** : Voir combien d'offres ont été faites ce mois-ci, ou vérifier celles de son équipe/superviseur pour se situer.
+
+---
+
+## Liste des données à extraire
+
+### 1. Recherches simples pour le client (Projections, sélections, tri, masques)
+* Objectif : Répondre rapidement à une demande client en face à face.
+* Données nécessaires :
+  * Les véhicules disponibles dans un budget précis donné par le client (ex: entre 15k€ et 25k€) triés du moins cher au plus cher.
+  * Les clients dont le nom commence par "D" (pour retrouver rapidement une fiche lors d'un appel).
+  * Les véhicules d'une couleur spécifique parmi un choix donné (ex: Noir, Blanc ou Gris) en utilisant `IN`.
+  * Trouver tous les véhicules qui ont plus de 100 000 km, classés par le plus kilométré.
+  * L'adresse d'un client spécifique dont on connaît le numéro de téléphone (utilisant un masque `LIKE`).
+
+### 2. Statistiques et synthèses (Fonctions d'agrégation avec GROUP BY / HAVING)
+* Objectif : Avoir une vue d'ensemble du stock et de l'activité.
+* Données nécessaires :
+  * Le nombre de véhicules en stock pour chaque type de motorisation, avec uniquement ceux ayant plus de 10 véhicules.
+  * Le prix moyen, minimum et maximum des véhicules par marque en stock.
+  * Le nombre total d'offres faites par ce commercial sur l'année en cours (groupé par année/mois).
+  * Les clients ayant reçu plus d'une offre (afin de cesser de les relancer inutilement ou de conclure la vente).
+  * Le kilométrage moyen des véhicules en stock, groupé par année de fabrication (uniquement pour les années récentes).
+
+### 3. Fiches complètes et suivis (Jointures)
+* Objectif : Obtenir des informations croisées, par exemple lier un client à l'offre et au véhicule proposé.
+* Données nécessaires :
+  * L'historique complet des offres d'un client (Nom du client, Nom du modèle, Prix proposé, Date).
+  * La liste des véhicules en stock avec leur marque, modèle et couleur (Jointure interne 3 tables).
+  * La fiche du commercial avec le nom de son superviseur pour les rapports (Auto-jointure externe).
+  * Les clients qui habitent dans la même ville que la concession où travaille le commercial.
+  * Les modèles du catalogue qui n'ont actuellement aucun véhicule physique en stock (Jointure externe des modèles vers le stock).
+
+### 4. Analyses avancées (Requêtes imbriquées : IN, EXISTS, ANY, ALL)
+* Objectif : Répondre à des demandes très spécifiques ou trouver des arguments de vente.
+* Données nécessaires :
+  * Les véhicules en stock dont le prix est inférieur au prix moyen de tous les véhicules de la même motorisation.
+  * Les clients intéressés (qui ont reçu une offre) par des modèles de marque "Renault" ou "Peugeot".
+  * Les modèles de véhicules pour lesquels aucun client n'a reçu d'offre récente (utiliser `NOT EXISTS`).
+  * Trouver si le commercial a fait une offre qui est plus élevée que **toute** offre faite par son propre superviseur (`> ALL`).
+  * Les véhicules (VIN, couleur) dont l'année de fabrication correspond à la plus récente possible de tout le stock.
+
+---
 ## Auteurs
 
 Rayan BELHOUS
