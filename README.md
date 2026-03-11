@@ -199,8 +199,6 @@ Fournis l'ensemble sous la forme d’un script SQL prêt à être exécuté.
 ---
 **Scénario d'utilisation**
 
-# Contexte d'Utilisation de la Base de Données "Concession Auto"
-
 ## Rôle et Contexte
 **Utilisateur cible :** Commercial en concession automobile.
 
