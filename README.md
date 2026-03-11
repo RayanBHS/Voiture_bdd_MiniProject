@@ -80,6 +80,20 @@ Ce dictionnaire liste les données « brutes » évoquées dans les règles ci-d
 **MCD**
 <img width="1400" height="819" alt="image" src="https://github.com/user-attachments/assets/9e421749-19f1-4d00-ab95-f24caa0bc35f" />
 
+
+---
+**MLD**
+VILLE = (Code_postal VARCHAR(10), Nom_de_la_ville VARCHAR(100));
+CONCESSION = (Code_concession VARCHAR(20), Nom_concession VARCHAR(100), Adresse_concession VARCHAR(255), #Code_postal);
+COMMERCIAL = (Matricule_commercial VARCHAR(20), Nom VARCHAR(50), Prenom VARCHAR(50), Date_embauche DATE, #Matricule_superviseur*, #Code_concession);
+CLIENT = (Numero_client VARCHAR(20), Nom VARCHAR(50), Prenom VARCHAR(50), Telephone VARCHAR(20), Email VARCHAR(100), Adresse_rue VARCHAR(255), #Code_postal);
+MARQUE = (Identifiant_marque INT, Nom_marque VARCHAR(50), Pays_origine VARCHAR(50));
+MODELE = (Code_modele VARCHAR(20), Nom_modele VARCHAR(100), Annee_lancement INT, Type_motorisation VARCHAR(50), #Identifiant_marque);
+VEHICULE = (Numero_chassis_VIN VARCHAR(17), Couleur VARCHAR(30), Kilometrage INT, Prix_catalogue DECIMAL(10,2), Annee_fabrication INT, #Code_modele);
+PHOTO = (#Numero_chassis_VIN, Numero_ordre_photo INT, Chemin_du_fichier VARCHAR(255));
+FAIRE_OFFRE = (#Numero_client, #Matricule_commercial, #Code_modele, Date_offre DATE, Prix_propose DECIMAL(10,2));
+
+
 --
 
 ## Auteurs
