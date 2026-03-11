@@ -33,6 +33,7 @@ Ces règles décrivent le fonctionnement de notre réseau de concessionnaires av
 * Nous gérons un stock de **véhicules** physiques. Un véhicule physique (identifié par son numéro de châssis unique) correspond à un seul modèle précis de notre catalogue.
 * Pour alimenter notre site vitrine, nous prenons des **photos** de nos véhicules en stock. Une photo est spécifique à un véhicule physique unique ; elle n'a aucune existence ni aucun sens en dehors de ce véhicule.
 * Nos commerciaux font des **offres commerciales**. Une offre relie un client, un commercial et un modèle de voiture spécifique à une date donnée, avec un prix proposé.
+* Notre stock de véhicules physiques est totalement centralisé au niveau du réseau. Par conséquent, n'importe quel commercial, quelle que soit sa concession de rattachement, peut proposer ou vendre n'importe quel véhicule disponible dans notre stock global.
 
 ---
 
