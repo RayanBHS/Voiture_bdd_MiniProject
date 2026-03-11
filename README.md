@@ -83,6 +83,7 @@ Ce dictionnaire liste les données « brutes » évoquées dans les règles ci-d
 
 ---
 **MLD**
+
 VILLE = (Code_postal VARCHAR(10), Nom_de_la_ville VARCHAR(100));
 CONCESSION = (Code_concession VARCHAR(20), Nom_concession VARCHAR(100), Adresse_concession VARCHAR(255), #Code_postal);
 COMMERCIAL = (Matricule_commercial VARCHAR(20), Nom VARCHAR(50), Prenom VARCHAR(50), Date_embauche DATE, #Matricule_superviseur*, #Code_concession);
