@@ -7,7 +7,8 @@ Ce projet vise à concevoir un système d'information pour concessionnaire autom
 
 ## Prompt utilisé
 
-```Tu travailles dans le domaine de l'automobile. Ton entreprise a comme activité de vendre des voitures. C'est une entreprise comme ByMyCar, ou encore les concessionnaires classiques. Il faut des données sur les voitures vendues, les marques de voitures, les modèles de voiture, les clients. Inspire-toi de la marque suivante : ByMyCar.
+```
+Tu travailles dans le domaine de l'automobile. Ton entreprise a comme activité de vendre des voitures. C'est une entreprise comme ByMyCar, ou encore les concessionnaires classiques. Il faut des données sur les voitures vendues, les marques de voitures, les modèles de voiture, les clients. Inspire-toi de la marque suivante : ByMyCar.
 
 Ton entreprise veut appliquer MERISE pour concevoir un système d'information. Tu es chargé de la partie analyse, c'est-à-dire de collecter les besoins auprès de l'entreprise. Elle a fait appel à un étudiant en ingénierie informatique pour réaliser ce projet, tu dois lui fournir les informations nécessaires pour qu'il applique ensuite lui-même les étapes suivantes de conception et développement de la base de données.
 
